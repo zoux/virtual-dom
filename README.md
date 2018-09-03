@@ -1,22 +1,6 @@
 # Virtual Dom
 
-参考资料：
-
-https://github.com/KieSun/My-wheels/tree/master/Virtual%20Dom
-
-
-## 使用 VD 的价值
-
-1. 在不需要手动优化的情况下，使框架能提供过得去的性能；
-2. 虽然在所有数据都变了的情况下，重置 innerHTML 其实是一个合理的操作，但局部更新 VD 的消费更小；
-3. 因为 key 的存在，DOM 元素可以复用。
-
-by 尤大：
-VD 真正的价值从来都不是性能，而是:
-1. 为函数式的 UI 编程方式打开了大门；
-2. 可以渲染到 DOM 以外的 backend，比如 ReactNative。
-
-https://www.zhihu.com/question/31809713/answer/53544875
+便于了解 Virtual Dom 原理的简单实现。
 
 
 ## 实现原理
@@ -47,3 +31,28 @@ Virtual Dom 算法的实现主要是以下三步：
 > 3. 在第二步中同时判断节点是否有移动
 
 #### 3. 渲染差异
+
+
+## 在 vue / react 中的优化点
+
+1. 部分改变多个节点构成的同级组合时，使用 v-if 而不是 template；
+2. 确保 key 为节点的唯一值。
+
+
+## 使用 VD 的价值
+
+1. 在不需要手动优化的情况下，使框架能提供过得去的性能；
+2. 虽然在所有数据都变了的情况下，重置 innerHTML 其实是一个合理的操作，但局部更新 VD 的消费更小；
+3. 因为 key 的存在，DOM 元素可以复用。
+
+by 尤大：
+VD 真正的价值从来都不是性能，而是:
+1. 为函数式的 UI 编程方式打开了大门；
+2. 可以渲染到 DOM 以外的 backend，比如 ReactNative。
+
+https://www.zhihu.com/question/31809713/answer/53544875
+
+
+## 参考资料：
+
+https://github.com/KieSun/My-wheels/tree/master/Virtual%20Dom
