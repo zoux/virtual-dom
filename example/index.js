@@ -1,6 +1,6 @@
-import Element from './element'
-import diff from './diff'
-import patch from './patch'
+import Element from '../src/element'
+import diff from '../src/diff'
+import patch from '../src/patch'
 
 const test3 = new Element('div', { class: 'my-div' }, ['test3'], '')
 const test4 = new Element('ul', { class: 'my-div' }, ['test4'], '')
